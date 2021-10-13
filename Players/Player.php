@@ -36,6 +36,7 @@ class Player
     public function setHealth(int $health): Player
     {
         $this->health = $health;
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class Player
     public function setStrength(int $strength): Player
     {
         $this->strength = $strength;
+
         return $this;
     }
 
@@ -114,6 +116,7 @@ class Player
     public function setLuck(int $luck): Player
     {
         $this->luck = $luck;
+
         return $this;
     }
 }
