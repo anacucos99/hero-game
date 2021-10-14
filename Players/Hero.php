@@ -34,22 +34,6 @@ class Hero extends Player
     }
 
     /**
-     * @return int
-     */
-    public function getRapidStrike(): int
-    {
-        return $this->rapidStrike;
-    }
-
-    /**
-     * @return int
-     */
-    public function getMagicShield(): int
-    {
-        return $this->magicShield;
-    }
-
-    /**
      * Initialize random stats.
      */
     public function initializeStats()
@@ -59,5 +43,16 @@ class Hero extends Player
         $this->defence = rand(HeroConstants::MINIMUM_DEFENCE, HeroConstants::MAXIMUM_DEFENCE);
         $this->speed = rand(HeroConstants::MINIMUM_SPEED, HeroConstants::MAXIMUM_SPEED);
         $this->luck = rand(HeroConstants::MINIMUM_LUCK, HeroConstants::MAXIMUM_LUCK);
+    }
+
+    /**
+     * @return Hero
+     */
+    public static function getHero(): Hero
+    {
+        $director = new HeroDirector();
+        $heroBuilder = new HeroBuilder();
+
+        return $director->build($heroBuilder);
     }
 }

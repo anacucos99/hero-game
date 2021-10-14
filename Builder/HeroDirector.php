@@ -17,9 +17,4 @@ class HeroDirector
 
         return $builder->getHero();
     }
-
-    // TODO: FOR GAMEPLAY
-    //$director = new HeroDirector();
-    //$heroBuilder = new HeroBuilder();
-    //$hero = $director->build($heroBuilder);
 }
