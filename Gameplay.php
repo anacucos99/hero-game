@@ -30,13 +30,16 @@ class Gameplay
 
         $hero = Hero::getHero();
         $beast = Beast::getInstance();
+        $hero->initializeStats();
+        $beast->initializeStats();
+
         $this->setAttackerAndDefender($hero, $beast);
 
         while ($rounds <= GameplayConstants::MAXIMUM_NO_OF_ROUNDS) {
             $damage = $this->setDamageToDefender();
             $this->output->outputStats($rounds, $damage, $this->attacker, $this->defender, $this->usedSkills);
 
-            if ($this->defender->getHealth() === 0) {
+            if ($this->defender->getHealth() <= 0) {
                 $winnerFound = true;
 
                 break;
@@ -102,7 +105,7 @@ class Gameplay
             $damage += $this->getDamage();
         }
 
-        if ($this->defender instanceof Hero && rand(GameplayConstants::MINIMUM_SKILL_RANGE, GameplayConstants::MAXIMUM_SKILL_RANGE) <= $this->attacker->magicShield) {
+        if ($this->defender instanceof Hero && rand(GameplayConstants::MINIMUM_SKILL_RANGE, GameplayConstants::MAXIMUM_SKILL_RANGE) <= $this->defender->magicShield) {
             $this->usedSkills[] = HeroConstants::MAGIC_SHIELD_SKILL;
             $damage += ($this->getDamage() / 2);
         }

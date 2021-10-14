@@ -10,7 +10,7 @@ class Output
      */
     public function outputWinner(Player $winner): void
     {
-        print 'The winner is: '.get_class($winner);
+        print 'The winner is: '.get_class($winner).PHP_EOL;
     }
 
     /**
@@ -35,6 +35,6 @@ class Output
 
         print 'Defender: '.get_class($defender).PHP_EOL;
         print 'Damage done: '.$damage.PHP_EOL;
-        print 'Defender\'s Health: '.$defender->getHealth().PHP_EOL;
+        print 'Defender\'s Health: '.$defender->getHealth().PHP_EOL.PHP_EOL.PHP_EOL;
     }
 }

@@ -1,5 +1,23 @@
 {
-    "require-dev": {
-        "phpunit/phpunit": "^7"
+    "autoload": {
+        "classmap": [
+            "Builder/HeroBuilder.php",
+            "Builder/HeroBuilderInterface.php",
+            "Builder/HeroDirector.php",
+            "Constants/HeroConstants.php",
+            "Constants/BeastConstants.php",
+            "Constants/GameplayConstants.php",
+            "Players/Hero.php",
+            "Players/Player.php",
+            "Players/Beast.php",
+            "Gameplay.php",
+            "Output.php"
+        ],
+        "psr-0": {
+            "phpUnit": ""
+        }
+    },
+    "require": {
+        "php": ">=8.0"
     }
 }

@@ -6,19 +6,19 @@
 class Player
 {
     /** @var int  */
-    protected int $health;
+    protected int $health = 0;
 
     /** @var int  */
-    protected int $strength;
+    protected int $strength = 0;
 
     /** @var int  */
-    protected int $defence;
+    protected int $defence = 0;
 
     /** @var int  */
-    protected int $speed;
+    protected int $speed = 0;
 
     /** @var int  */
-    protected int $luck;
+    protected int $luck = 0;
 
     /**
      * @return int
