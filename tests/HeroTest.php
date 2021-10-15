@@ -1,10 +1,15 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+use Traits\TestTrait;
+
 /**
  * Class HeroTest
  */
-class HeroTest extends BaseTest
+class HeroTest extends TestCase
 {
+    use TestTrait;
+
     /**
      * Check if hero instance is created
      */

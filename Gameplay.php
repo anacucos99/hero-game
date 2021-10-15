@@ -21,6 +21,22 @@ class Gameplay
     {}
 
     /**
+     * @return Player
+     */
+    public function getDefender(): Player
+    {
+        return $this->defender;
+    }
+
+    /**
+     * @return Player
+     */
+    public function getAttacker(): Player
+    {
+        return $this->attacker;
+    }
+
+    /**
      * Play function
      */
     public function play()

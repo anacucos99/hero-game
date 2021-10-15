@@ -11,7 +11,8 @@
             "Players/Player.php",
             "Players/Beast.php",
             "Gameplay.php",
-            "Output.php"
+            "Output.php",
+            "tests/"
         ],
         "psr-0": {
             "phpUnit": ""

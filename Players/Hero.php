@@ -55,4 +55,12 @@ class Hero extends Player
 
         return $director->build($heroBuilder);
     }
+
+    /**
+     * Destroy method
+     */
+    public function destroy()
+    {
+        self::$instance = null;
+    }
 }

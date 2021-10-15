@@ -1,11 +1,15 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace Traits;
+
+use ReflectionClass;
+use ReflectionException;
+use ReflectionMethod;
 
 /**
- * Class BaseTest
+ * Trait TestTrait
  */
-class BaseTest extends TestCase
+trait TestTrait
 {
     /**
      * @param int $value
@@ -14,8 +18,8 @@ class BaseTest extends TestCase
      */
     protected function assertIsInRange(int $value, int $min, int $max): void
     {
-       $this->assertLessThanOrEqual($max, $value);
-       $this->assertGreaterThanOrEqual($min, $value);
+        $this->assertLessThanOrEqual($max, $value);
+        $this->assertGreaterThanOrEqual($min, $value);
     }
 
     /**
@@ -24,7 +28,7 @@ class BaseTest extends TestCase
      *
      * @return ReflectionMethod
      *
-     * @throws ReflectionException
+     * @throws ReflectionException|\ReflectionException
      */
     protected static function getMethod(string $name, string $class): ReflectionMethod
     {

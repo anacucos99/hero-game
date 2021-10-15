@@ -38,4 +38,12 @@ class Beast extends Player
         $this->speed = rand(BeastConstants::MINIMUM_SPEED, BeastConstants::MAXIMUM_SPEED);
         $this->luck = rand(BeastConstants::MINIMUM_LUCK, BeastConstants::MAXIMUM_LUCK);
     }
+
+    /**
+     * Destroy method
+     */
+    public function destroy()
+    {
+        self::$instance = null;
+    }
 }
