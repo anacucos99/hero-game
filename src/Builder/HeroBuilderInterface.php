@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Builder;
+
 /**
  * Interface HeroBuilder
  */

@@ -1,5 +1,9 @@
 <?php
 
+namespace src\Players;
+
+use src\Constants\BeastConstants;
+
 /**
  * Class Beast
  */

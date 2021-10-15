@@ -1,5 +1,11 @@
 <?php
 
+namespace src\Players;
+
+use src\Builder\HeroBuilder;
+use src\Builder\HeroDirector;
+use src\Constants\HeroConstants;
+
 /**
  * Class Hero
  */

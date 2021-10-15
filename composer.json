@@ -1,21 +1,8 @@
 {
     "autoload": {
-        "classmap": [
-            "Builder/HeroBuilder.php",
-            "Builder/HeroBuilderInterface.php",
-            "Builder/HeroDirector.php",
-            "Constants/HeroConstants.php",
-            "Constants/BeastConstants.php",
-            "Constants/GameplayConstants.php",
-            "Players/Hero.php",
-            "Players/Player.php",
-            "Players/Beast.php",
-            "Gameplay.php",
-            "Output.php",
-            "tests/"
-        ],
-        "psr-0": {
-            "phpUnit": ""
+        "psr-4": {
+            "src\\": "src/",
+            "Traits\\": "tests/Traits"
         }
     },
     "require": {

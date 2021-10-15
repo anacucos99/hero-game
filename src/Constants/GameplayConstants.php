@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Constants;
+
 /**
  * Class GameplayConstants
  */
@@ -12,4 +14,7 @@ class GameplayConstants
 
     const MINIMUM_SKILL_RANGE = 0;
     const MAXIMUM_SKILL_RANGE = 100;
+
+    const ATTACKER = 'Attacker';
+    const DEFENDER = 'Defender';
 }

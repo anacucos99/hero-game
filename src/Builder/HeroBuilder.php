@@ -1,5 +1,10 @@
 <?php
 
+namespace src\Builder;
+
+use src\Constants\HeroConstants;
+use src\Players\Hero;
+
 /**
  * Class HeroBuilder
  */

@@ -1,6 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use src\Game\Gameplay;
+use src\Game\Output;
+use src\Players\Beast;
+use src\Players\Hero;
 use Traits\TestTrait;
 
 /**

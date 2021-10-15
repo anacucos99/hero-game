@@ -1,5 +1,9 @@
 <?php
 
+namespace src\Builder;
+
+use src\Players\Hero;
+
 /**
  * Class HeroDirector
  */

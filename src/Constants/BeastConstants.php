@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Constants;
+
 /**
  * Class BeastConstants
  */

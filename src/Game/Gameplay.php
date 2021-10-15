@@ -1,5 +1,13 @@
 <?php
 
+namespace src\Game;
+
+use src\Constants\GameplayConstants;
+use src\Constants\HeroConstants;
+use src\Players\Beast;
+use src\Players\Hero;
+use src\Players\Player;
+
 /**
  * Class Gameplay
  */
@@ -39,10 +47,10 @@ class Gameplay
     /**
      * Play function
      */
-    public function play()
+    public function play(): void
     {
         $winnerFound = false;
-        $rounds = 1;
+        $turns = 1;
 
         $hero = Hero::getHero();
         $beast = Beast::getInstance();
@@ -50,10 +58,12 @@ class Gameplay
         $beast->initializeStats();
 
         $this->setAttackerAndDefender($hero, $beast);
+        $this->output->outputInitialsStats($this->attacker, GameplayConstants::ATTACKER);
+        $this->output->outputInitialsStats($this->defender, GameplayConstants::DEFENDER);
 
-        while ($rounds <= GameplayConstants::MAXIMUM_NO_OF_ROUNDS) {
+        while ($turns <= GameplayConstants::MAXIMUM_NO_OF_ROUNDS) {
             $damage = $this->setDamageToDefender();
-            $this->output->outputStats($rounds, $damage, $this->attacker, $this->defender, $this->usedSkills);
+            $this->output->outputStats($turns, $damage, $this->attacker, $this->defender, $this->usedSkills);
 
             if ($this->defender->getHealth() <= 0) {
                 $winnerFound = true;
@@ -63,12 +73,16 @@ class Gameplay
 
             $this->switchPlayers();
 
-            $rounds++;
+            $turns++;
         }
 
         if ($winnerFound) {
             $this->output->outputWinner($this->attacker);
+
+            return;
         }
+
+        $this->output->outputTie();
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use src\Constants\HeroConstants;
+use src\Players\Hero;
 use Traits\TestTrait;
 
 /**
