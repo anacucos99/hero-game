@@ -51,35 +51,11 @@ class Player
     }
 
     /**
-     * @param int $strength
-     *
-     * @return Player
-     */
-    public function setStrength(int $strength): Player
-    {
-        $this->strength = $strength;
-
-        return $this;
-    }
-
-    /**
      * @return int
      */
     public function getDefence(): int
     {
         return $this->defence;
-    }
-
-    /**
-     * @param int $defence
-     *
-     * @return Player
-     */
-    public function setDefence(int $defence): Player
-    {
-        $this->defence = $defence;
-
-        return $this;
     }
 
     /**
@@ -91,34 +67,10 @@ class Player
     }
 
     /**
-     * @param int $speed
-     *
-     * @return Player
-     */
-    public function setSpeed(int $speed): Player
-    {
-        $this->speed = $speed;
-
-        return $this;
-    }
-
-    /**
      * @return int
      */
     public function getLuck(): int
     {
         return $this->luck;
-    }
-
-    /**
-     * @param int $luck
-     *
-     * @return Player
-     */
-    public function setLuck(int $luck): Player
-    {
-        $this->luck = $luck;
-
-        return $this;
     }
 }
