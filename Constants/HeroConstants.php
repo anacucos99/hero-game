@@ -7,6 +7,8 @@ class HeroConstants
 {
     const RAPID_STRIKE_SKILL = 'rapid strike';
     const MAGIC_SHIELD_SKILL = 'magic shield';
+    const RAPID_STRIKE_ATTRIBUTE = 'rapidStrike';
+    const MAGIC_SHIELD_ATTRIBUTE = 'magicShield';
 
     const MINIMUM_HEALTH = 70;
     const MAXIMUM_HEALTH = 100;

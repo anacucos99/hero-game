@@ -26,11 +26,11 @@ class Hero extends Player
      */
     public static function getInstance(): Hero
     {
-        if (null !== self::$instance) {
-            return self::$instance;
+        if (null === self::$instance) {
+            self::$instance = new Hero();
         }
 
-        return new Hero();
+        return self::$instance;
     }
 
     /**
